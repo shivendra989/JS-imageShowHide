@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ImZoom</title>
+    <link rel="stylesheet" href="all.min.css">
+    <link rel="stylesheet" href="bootstrap.min.css">
+    <link rel="stylesheet" href="js/bootstrap.bundle.js">
+    <style>
+        .imgs{
+            height: 250px;
+            width: 250px;
+            border: 3px solid black;
+            padding: 10px;
+            border-radius: 5px;
+            margin: 25px;
+        }
+        
+        .a{
+        }
+        #modal{
+            height: 700px;
+            width: 100%;
+            background:rgba(0,0,0,.3);
+            position: fixed;
+           top: 0px;
+           display: none;
+        }
+        #modalinner{
+       height: 350px;
+       width: 450px;
+       background-color: white;
+       border-radius: 10px;
+       padding: 25px;
+       margin: 80px auto;
+        }
+        #modalinner img{
+            height: 85%;
+            width: 100%;
+            /* display: none; */
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2> <center style="font-family: cursive; font-weight: bold;">Image's Show And Hide</center></h2>
+     <div class="row a ">
+        <div class="col-sm-3">
+            <img src="img/hacking-2.jpg" class="imgs img-thumbnail " onclick="demo(this)" >
+        </div>
+        <div class="col-sm-3">
+            <img src="img/nature.jpg" class="imgs img-thumbnail"onclick="demo(this)">
+        </div>
+        <div class="col-sm-3">
+            <img src="img/binary.webp" class="imgs img-thumbnail " onclick="demo(this)">
+        </div>
+        <div class="col-sm-3">
+            <img src="img/hack1.jpg" class="imgs img-thumbnail" onclick="demo(this)">
+        </div>
+     </div>
+     <div class="row">
+        <div class="col-sm-3">
+            <img src="img/hack2.jpg" class="imgs img-thumbnail" onclick="demo(this)">
+        </div>
+        <div class="col-sm-3">
+            <img src="img/OIP.jpg" class="imgs img-thumbnail" onclick="demo(this)">
+        </div>
+        <div class="col-sm-3">
+            <img src="img/hacking-2.jpg" class="imgs img-thumbnail" onclick="demo(this)">
+        </div>
+        <div class="col-sm-3">
+            <img src="img/binary.webp" class="imgs img-thumbnail" onclick="demo(this)">
+        </div>
+     </div>
+    </div>
+     <!-- StartModal -->
+     <div id="modal">
+        <div id="modalinner"> 
+            <h3>Image Title 
+                <a href="imgZoom.html" style="color: red; text-decoration: none; float: right;">X</a>
+            </h3>
+            <img src="img/images.jpg" id="imgbig" >
+        </div>
+     </div>
+ 
+    <script>
+         function demo(x){
+            document.querySelector("#modal").style.display="block";
+            document.querySelector("#imgbig").src=x.src
+         }   
+        //  window.setTimeout(function() {
+        //     document.querySelector("#modal").style.display="none";
+        //  }.5000)
+    </script>
+</body>
+</html>
